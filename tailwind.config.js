@@ -1,7 +1,18 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-export default defineConfig({
-  plugins: [vue()],
-  build: { outDir: 'dist' }
-})
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class', // activamos modo oscuro
+  content: [
+    './index.html',
+    './src/**/*.{vue,js,ts,jsx,tsx}'
+  ],
+  theme: {
+    extend: {
+      fontSize: {
+        xl: '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem'
+      }
+    }
+  },
+  plugins: []
+}
